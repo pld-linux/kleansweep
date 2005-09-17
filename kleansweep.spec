@@ -1,4 +1,6 @@
 Summary:	KleanSweep consists of KDE-based (C++) graphical frontend and small helper Perl script that performs actual searching
+Summary(pl):	KleanSweep sk³ada siê z graficznego interjesu opartego na KDE
+i ma³ego skryptu pomocniczego w Perlu, który wykonuje poszukiwania
 Name:		kleansweep
 Version:	0.1.5
 Release:	1
@@ -7,21 +9,30 @@ Group:		Applications/System
 Source0:	http://linux.bydg.org/~yogin/%{name}-%{version}.tar.bz2
 # Source0-md5:	1521d883eb059575a6dbde42866ec4ec
 URL:		http://linux.bydg.org/~yogin/
-BuildRequires:  docbook-dtd-sgml
-BuildRequires:  docbook-style-dsssl
+BuildRequires:	docbook-dtd-sgml
+BuildRequires:	docbook-style-dsssl
 BuildRequires:	kdelibs >= 3.0
 BuildRequires:	perl
-BuildRequires:  rpmbuild(macros) >= 1.129
+BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	scons
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 KleanSweep consists of KDE-based (C++) graphical frontend and small
 helper Perl script that performs actual searching. All searches,
-except for orphaned files, duplicates and dead menu entries are as
+except for orphaned files, duplicates and dead menu entires are as
 fast as usual 'find' would be. KleanSweep requires KDE libraries and
-Perl. Note: I take no responsibility for any damage caused by this
-program. Rate this project at kde-apps.org.
+Perl. Note: Author takes no responsibility for any damage caused by
+this program. Rate this project at kde-apps.org.
+
+%description -l pl
+KleanSweep sk³ada siê z graficznego interjesu opartego na KDE i ma³ego
+skryptu pomocniczego w Perlu, który wykonuje poszukiwania. Wszystkie
+poszukiwania, za wyj±tkiem osieroconych plików, zduplikowanych i
+martwych wpisów menu, s± tak szybko jak zwyk³e 'szukanie' mo¿e byæ.
+KleanSweep wymaga bibliotek KDE i Perl. Uwaga: Autor nie bierze
+odpowiedzialno¶ci za jakiekolwiek uszkodzenia spowodowane tym
+programem. Oddaj g³os na tej projekt na kde-apps.org.
 
 %prep
 %setup -q
@@ -41,7 +52,7 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 DESTDIR=$RPM_BUILD_ROOT scons install
 
-mv -f $RPM_BUILD_ROOT%{_datadir}/applnk/System/%{name}.desktop $RPM_BUILD_ROOT%{_desktopdir}/
+mv -f $RPM_BUILD_ROOT%{_applnkdir}/System/%{name}.desktop $RPM_BUILD_ROOT%{_desktopdir}/
 echo "Categories=Qt;KDE;Utility;System;" >> $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
 
 %clean
