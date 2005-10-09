@@ -1,5 +1,5 @@
 Summary:	KleanSweep - KDE-based (C++) graphical frontend and script that performs actual searching
-Summary(pl):	KleanSweep - graficznego interjesu opartego na KDE i skrypt wykonuj±cy poszukiwania
+Summary(pl):	KleanSweep - graficzny interjes oparty na KDE i skrypt wykonuj±cy poszukiwania
 Name:		kleansweep
 Version:	0.1.8
 Release:	1
