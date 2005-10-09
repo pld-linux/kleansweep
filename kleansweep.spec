@@ -1,12 +1,12 @@
 Summary:	KleanSweep - KDE-based (C++) graphical frontend and script that performs actual searching
 Summary(pl):	KleanSweep - graficznego interjesu opartego na KDE i skrypt wykonuj±cy poszukiwania
 Name:		kleansweep
-Version:	0.1.5
+Version:	0.1.8
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://linux.bydg.org/~yogin/%{name}-%{version}.tar.bz2
-# Source0-md5:	1521d883eb059575a6dbde42866ec4ec
+# Source0-md5:	ec540d1ebd8e05ce63116e217831b0a9
 URL:		http://linux.bydg.org/~yogin/
 BuildRequires:	docbook-dtd-sgml
 BuildRequires:	docbook-style-dsssl
@@ -14,6 +14,8 @@ BuildRequires:	kdelibs >= 3.0
 BuildRequires:	perl-base
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	scons
+BuildRequires:  sed >= 4.0
+
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,6 +39,9 @@ kde-apps.org.
 %prep
 %setup -q
 
+%{__sed} -i 's/Icon=kleansweep/Icon=kleansweep.png/' ./src/%{name}.desktop
+echo "Categories=Qt;KDE;Utility;System;" >> ./src/%{name}.desktop
+
 %build
 scons configure \
         qtincludes=%{_includedir}/qt \
@@ -53,7 +58,6 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}
 DESTDIR=$RPM_BUILD_ROOT scons install
 
 mv -f $RPM_BUILD_ROOT%{_datadir}/applnk/System/%{name}.desktop $RPM_BUILD_ROOT%{_desktopdir}
-echo "Categories=Qt;KDE;Utility;System;" >> $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
