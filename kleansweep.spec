@@ -42,6 +42,9 @@ kde-apps.org.
 echo "Categories=Qt;KDE;Utility;System;" >> ./src/%{name}.desktop
 
 %build
+export CXXFLAGS="%{rpmcflags}"
+export QTDIR="%{_usr}"
+
 scons configure \
         qtincludes=%{_includedir}/qt \
         prefix=%{_prefix} %{?debug:debug=full} \
