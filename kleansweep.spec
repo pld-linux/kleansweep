@@ -1,12 +1,12 @@
 Summary:	KleanSweep - KDE-based (C++) graphical frontend and script that performs actual searching
 Summary(pl):	KleanSweep - graficzny interjes oparty na KDE i skrypt wykonuj±cy poszukiwania
 Name:		kleansweep
-Version:	0.2.1
+Version:	0.2.4
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://linux.bydg.org/~yogin/%{name}-%{version}.tar.bz2
-# Source0-md5:	564677e97a397826dbd4b94c8a990bfa
+# Source0-md5:	928f89e6b683f390a7ab9c808607c882
 URL:		http://linux.bydg.org/~yogin/
 BuildRequires:	docbook-dtd-sgml
 BuildRequires:	docbook-style-dsssl
@@ -68,4 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 #%doc %{_kdedocdir}/en/
 %{_iconsdir}/hicolor/*/apps/*.png
 %{_datadir}/apps/%{name}/*.png
+%{_datadir}/apps/%{name}/%{name}-rules
+%{_datadir}/apps/%{name}/%{name}-blacklist
 %{_desktopdir}/%{name}.desktop
