@@ -10,7 +10,7 @@ Source0:	http://linux.bydg.org/~yogin/%{name}-%{version}.tar.bz2
 URL:		http://linux.bydg.org/~yogin/
 BuildRequires:	docbook-dtd-sgml
 BuildRequires:	docbook-style-dsssl
-BuildRequires:	kdelibs >= 3.0
+BuildRequires:	kdelibs-devel >= 3.0
 BuildRequires:	perl-base
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	scons
