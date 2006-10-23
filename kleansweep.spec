@@ -57,15 +57,15 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}
 DESTDIR=$RPM_BUILD_ROOT scons install
 
 mv -f $RPM_BUILD_ROOT%{_datadir}/applnk/System/%{name}.desktop $RPM_BUILD_ROOT%{_desktopdir}
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
-#%doc %{_kdedocdir}/en/
 %{_iconsdir}/hicolor/*/apps/*.png
 %dir %{_datadir}/apps/%{name}
 %{_datadir}/apps/%{name}/*.png
