@@ -67,6 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 #%doc %{_kdedocdir}/en/
 %{_iconsdir}/hicolor/*/apps/*.png
+%dir %{_datadir}/apps/%{name}
 %{_datadir}/apps/%{name}/*.png
 %{_datadir}/apps/%{name}/%{name}-rules
 %{_datadir}/apps/%{name}/%{name}-blacklist
