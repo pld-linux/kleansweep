@@ -10,7 +10,7 @@ Source0:	http://linux.bydg.org/~yogin/%{name}-%{version}.tar.bz2
 URL:		http://linux.bydg.org/~yogin/
 BuildRequires:	docbook-dtd-sgml
 BuildRequires:	docbook-style-dsssl
-BuildRequires:	kdelibs-devel >= 3.0
+BuildRequires:	kdelibs-devel >= 9:3.0
 BuildRequires:	perl-base
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	scons
@@ -43,12 +43,12 @@ export CXXFLAGS="%{rpmcflags}"
 export QTDIR="%{_usr}"
 
 scons configure \
-        qtincludes=%{_includedir}/qt \
-        prefix=%{_prefix} %{?debug:debug=full} \
+	qtincludes=%{_includedir}/qt \
+	prefix=%{_prefix} %{?debug:debug=full} \
 %if "%{_lib}" == "lib64"
-        libsuffix=64 \
+	libsuffix=64 \
 %endif
-        qtlibs=%{_libdir}
+	qtlibs=%{_libdir}
 
 %install
 rm -rf $RPM_BUILD_ROOT
