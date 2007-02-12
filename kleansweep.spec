@@ -1,5 +1,5 @@
 Summary:	KleanSweep - KDE-based (C++) graphical frontend and script that performs actual searching
-Summary(pl):	KleanSweep - graficzny interjes oparty na KDE i skrypt wykonuj±cy poszukiwania
+Summary(pl.UTF-8):   KleanSweep - graficzny interjes oparty na KDE i skrypt wykonujÄ…cy poszukiwania
 Name:		kleansweep
 Version:	0.2.9
 Release:	1
@@ -25,14 +25,14 @@ fast as usual 'find' would be. KleanSweep requires KDE libraries and
 Perl. Note: Author takes no responsibility for any damage caused by
 this program. You can rate this project at kde-apps.org.
 
-%description -l pl
-KleanSweep sk³ada siê z graficznego interfejsu opartego na KDE i
-ma³ego skryptu pomocniczego w Perlu, który wykonuje poszukiwania.
-Wszystkie poszukiwania, za wyj±tkiem osieroconych plików,
-zduplikowanych i martwych wpisów menu, s± tak szybkie, jak tylko mo¿e
-byæ zwyk³e "szukanie". KleanSweep wymaga bibliotek KDE i Perla. Uwaga:
-Autor nie bierze odpowiedzialno¶ci za jakiekolwiek uszkodzenia
-spowodowane tym programem. Na ten projekt mo¿na g³osowaæ na
+%description -l pl.UTF-8
+KleanSweep skÅ‚ada siÄ™ z graficznego interfejsu opartego na KDE i
+maÅ‚ego skryptu pomocniczego w Perlu, ktÃ³ry wykonuje poszukiwania.
+Wszystkie poszukiwania, za wyjÄ…tkiem osieroconych plikÃ³w,
+zduplikowanych i martwych wpisÃ³w menu, sÄ… tak szybkie, jak tylko moÅ¼e
+byÄ‡ zwykÅ‚e "szukanie". KleanSweep wymaga bibliotek KDE i Perla. Uwaga:
+Autor nie bierze odpowiedzialnoÅ›ci za jakiekolwiek uszkodzenia
+spowodowane tym programem. Na ten projekt moÅ¼na gÅ‚osowaÄ‡ na
 kde-apps.org.
 
 %prep
